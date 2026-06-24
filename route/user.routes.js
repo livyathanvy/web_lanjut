@@ -1,10 +1,10 @@
 import express from "express";
-import { tambahuser, login, Users } from "../controllers/user.controllers.js";
+import { tambahuser, login, user } from "../controllers/user.controllers.js";
 import { authenticateToken } from "../middleware/VerifyTokens.js";
 const routerUser = express.Router();
 routerUser.post("/", tambahuser);
 routerUser.post("/login", login);
-routerUser.get("/getAllUsers", Users);
+routerUser.get("/getAllUsers", user);
 routerUser.get("/dashboard", authenticateToken, (req, res) => {
   res.send("Welcome to the dashboard!");
 });
