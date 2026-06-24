@@ -4,7 +4,7 @@ import { authenticateToken } from "../middleware/VerifyTokens.js";
 const routerUser = express.Router();
 routerUser.post("/", tambahuser);
 routerUser.post("/login", login);
-routerUser.get("/getAllUser", User);
+routerUser.get("/getAllUser", user);
 routerUser.get("/dashboard", authenticateToken, (req, res) => {
   res.send("Welcome to the dashboard!");
 });
