@@ -54,13 +54,6 @@ export const login = async (req, res) => {
   }
 };
 
-try {
-        const products= await Users.findAll();
-        res.json(products);
-    } catch (error) {
-        res.json({ message: error.message });
-    };
-
  export const cariuserByID = async (req, res) => {
     try {
         const product = await Users.findAll({
