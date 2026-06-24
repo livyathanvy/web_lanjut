@@ -60,14 +60,7 @@ try {
     } catch (error) {
         res.json({ message: error.message });
     };
-export const tambahuserbaru = async (req, res) => {
-    try {
-        const product = await Users.create(req.body);
-        res.json({ message: "User berhasil ditambahkan" });
-    } catch (error) {
-        res.json({ message: error.message });
-    }
-};
+
  export const cariuserByID = async (req, res) => {
     try {
         const product = await Users.findAll({
